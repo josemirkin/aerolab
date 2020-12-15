@@ -1,0 +1,19 @@
+.font {
+    font-size :24px;
+    color: #a3a3a3;
+    letter-spacing: -0.15px;
+    text-align: center;
+
+    &.filter {
+        line-height: 48px;
+        margin: 24px;    background-color: #ededed;
+        border-radius: 100px;
+        width: 178px;
+        height: 48px;
+    }
+
+    &.active {
+        background-color: #0ad4fa;
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        margin-left: 42px;
+    }
+
+    .user-info {
+        align-items: center;
+        font-size:24px;
+        color:#616161;
+        letter-spacing:-0.15px;
+        line-height:48px;
+        text-align:left;
+    }
+}
