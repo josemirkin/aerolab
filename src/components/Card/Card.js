@@ -1,13 +1,12 @@
 import React from 'react'
 
-import alienware from '../../images/Alienware.png'
 import coinsLogo from '../../images/coin.svg'
 import buyBlue from '../../images/buy-blue.svg'
 import buyWhite from '../../images/buy-white.svg'
 
 import './Card.scss'
 
-function Card() {
+function Card({category, cost, id, img, name}) {
     return (
         <div className="col">
             <div className="card">
@@ -17,7 +16,7 @@ function Card() {
                     </div>
                     <div className="buy-menu">
                         <div className="buy-menu coins">
-                            12.000
+                            {cost}
                                 <img src={coinsLogo} alt="coins"/>
                         </div>
                         <div className="buy-menu button">Redeem now</div>
@@ -35,11 +34,11 @@ function Card() {
                 <div className="d-flex justify-content-end">
                     <img src={buyBlue} alt="buy" className="buy-logo buy-logo-disappear" />
                 </div>
-                <img src={alienware} className="card-img-top" alt="..." />
+                <img src={img} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <p className="card-text">Category</p>
+                    <p className="card-text">{category}</p>
                     <div className="card-title d-flex">
-                        Product
+                        {name}
                     </div>
                 </div>
             </div>
