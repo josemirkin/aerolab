@@ -8,7 +8,7 @@ function HeaderImage() {
     return (
         <div className="header-image">
             <img src={headerImg} alt="headerimg" className="image"/>
-            <h2>Electronics</h2>
+            {/*Electronics*/}
         </div>
     )
 }

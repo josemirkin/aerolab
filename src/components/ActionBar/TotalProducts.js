@@ -1,9 +1,11 @@
 import React from 'react'
 
+import './TotalProducts.scss'
+
 function TotalProducts() {
     return (
-        <div>
-            <p><b>15 of 32 products</b></p>
+        <div className="total-products">
+            15 of 32 products
         </div>
     )
 }

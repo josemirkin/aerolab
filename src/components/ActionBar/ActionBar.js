@@ -10,7 +10,7 @@ function ActionBar() {
     return (
         <div className="action-bar d-flex">
             <TotalProducts />
-            <div className="test">
+            <div className="action-bar-container">
                 <Filters />
                 <Arrows />
             </div>
