@@ -1,2 +1,10 @@
 export const ADD_NUMBER = 'ADD_NUMBER'
+
+// PRODUCTS
 export const SET_PRODUCTS = 'SET_PRODUCTS'
+export const SET_HIGHEST_PRICE = 'SET_HIGHEST_PRICE'
+export const SET_LOWEST_PRICE = 'SET_LOWEST_PRICE'
+export const SET_MOST_RECENT = 'SET_MOST_RECENT'
+
+// USER
+export const GET_USER = 'GET_USER'

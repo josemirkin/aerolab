@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function User() {
+export default function User({name}) {
     return (
         <div className="user">
-            Your User
+            {name}
         </div>
     )
 }

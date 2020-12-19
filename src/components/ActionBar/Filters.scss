@@ -5,6 +5,11 @@
     text-align: center;
     margin: auto;
     white-space: nowrap;
+    cursor: pointer;
+
+    &.with-padding {
+        padding-left: 24px;
+    }
 
     &.filter {
         line-height: 48px;

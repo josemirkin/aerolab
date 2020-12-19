@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import User from './User'
 import Points from './Points'
@@ -8,14 +8,14 @@ import logo from '../../images/aerolab-logo.svg'
 
 import './Header.scss'
 
-function Header() {
+function Header({ user }) {
     return (
         <div>
             <div className="header">
-                <img src={logo} alt="logo" className="logo"/>
+                <img src={logo} alt="logo" className="logo" />
                 <div className="d-flex user-info">
-                    <User />
-                    <Points />
+                    <User name={user?.name} />
+                    <Points points={user?.points} />
                 </div>
             </div>
             <HeaderImage />

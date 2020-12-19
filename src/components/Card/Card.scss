@@ -13,15 +13,27 @@
         height: 276px;
         
         .buy-item-hover {
-            opacity: 1; //cambiar a 1
+            opacity: 1;
         }
 
-        .buy-coins-hover {
-            opacity: 0; //cambiar a 1
+        .buy-logo {
+            &-disappear {
+                display: none;
+            }
         }
 
-        &.buy-logo-disappear {
-            opacity: 0;
+        .need-coins {
+            display: none;
+        }
+    }
+
+    .buy-logo {
+        &-white {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: 10px;
+            margin-right: 6px;
         }
     }
 
@@ -31,20 +43,19 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(-180deg, rgba(10, 212, 250, .7) 0%,rgba(37, 187, 241, .7) 100%);
+        background-image: linear-gradient(-180deg, rgba(10, 212, 250, .8) 0%,rgba(37, 187, 241, .8) 100%);
         opacity: 0;
         transition: all .3s;
     }
 
     .buy-coins-hover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background:rgba(97, 97, 97, 0.8);
-        opacity: 0; 
-        transition: all .3s;
+
+        .buy-logo {
+            &-white, &-disapear {
+                display: none;
+            }
+        }
     }
 
     .buy-logo {
@@ -57,7 +68,12 @@
     }
 
     .buy-menu {
-        &.coins {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 46px;
+
+        &-coins {
             font-size: 36px;
             color: #ffffff;
             letter-spacing: -0.08px;
@@ -66,10 +82,11 @@
             margin-bottom: 12px;
         }
 
-        &.button {
+        &-button {
             background: #ffffff;
             width: 228px;
             height: 42px;
+            border: none;
             border-radius: 100px;
             margin: auto;
             margin-bottom: 77px;
@@ -83,8 +100,25 @@
         height: 182px;
         margin: auto;
 
-        .card-img-top {
-            margin-top: -30px;
+        .icon-container {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            .need-coins {
+                opacity:0.8;
+                background:#616161;
+                border-radius:100px;
+                width:142px;
+                height:42px;
+                font-size:14px;
+                color:#ffffff;
+                letter-spacing:-0.03px;
+                text-align:right;
+                margin-top: 12px;
+                margin-right: 12px;
+                padding: 5px;
+            }
         }
     }
 }

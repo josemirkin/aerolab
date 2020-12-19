@@ -4,11 +4,11 @@ import coinsLogo from '../../images/coin.svg'
 
 import './Points.scss'
 
-export default function Points() {
+export default function Points({points}) {
     return (
         <div className="points">
             <div>
-            2500
+            {points}
             <img src={coinsLogo} alt="coins"/>
             </div>
         </div>
