@@ -1,5 +1,4 @@
-import { string } from 'prop-types';
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { highestPrice, lowestPrice, mostRecent } from '../../store/actions/products.actions'
@@ -25,6 +24,7 @@ function Filters() {
                 dispatch(mostRecent())
                 setActive(type)
                 break
+            // no default
         }
     }
     return (

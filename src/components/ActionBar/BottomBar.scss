@@ -1,0 +1,17 @@
+.footer {
+    height: 100px;
+
+    .bottom-bar {
+        align-items: center;
+        margin: 60px 0px 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid  #d9d9d9;
+    
+        .bottom-bar-container {
+            justify-content: flex-end;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}

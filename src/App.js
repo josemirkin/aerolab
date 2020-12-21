@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header/Header'
 import ActionBar from './components/ActionBar/ActionBar'
 import CardsGroup from './components/CardsGroup/CardsGroup'
+import BottomBar from './components/ActionBar/BottomBar'
 
 
 import './App.scss'
@@ -31,6 +32,7 @@ function App() {
       <div className="container">
         <ActionBar />
         <CardsGroup products={products} user={user}/>
+        <BottomBar />
       </div>
       <ToastContainer />
     </div>

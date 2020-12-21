@@ -6,7 +6,7 @@ import './CardsGroup.scss'
 
 function CardsGroup({products, user}) {
     return (
-        <div className="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 cards-group">
+        <div className="row cards-group">
             {
                 products.map((product, i) => <Card
                                             category={product.category}

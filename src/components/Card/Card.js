@@ -1,6 +1,6 @@
 import React from 'react'
-import {useDispatch} from 'react-redux'
-import {toast} from 'react-toastify'
+import { useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
 
 import coinsLogo from '../../images/coin.svg'
 import buyBlue from '../../images/buy-blue.svg'
@@ -12,13 +12,13 @@ import './Card.scss'
 import { getUser } from '../../store/actions/user.actions'
 
 function Card({ category, cost, id, img, name, userCoins }) {
-    const enoughCoins = userCoins < cost 
+    const enoughCoins = userCoins < cost
 
     const dispatch = useDispatch()
     const onClick = async () => {
         if (!enoughCoins) {
             try {
-                const {data} = await UserService.redeemProduct({productId: id})
+                const { data } = await UserService.redeemProduct({ productId: id })
                 toast.success(data.message, {
                     position: 'bottom-center'
                 })
@@ -30,7 +30,7 @@ function Card({ category, cost, id, img, name, userCoins }) {
             }
         } else {
             try {
-                const {data} = await UserService.addCoins()
+                const { data } = await UserService.addCoins()
                 toast.success(data.message, {
                     position: 'bottom-center'
                 })
@@ -45,16 +45,24 @@ function Card({ category, cost, id, img, name, userCoins }) {
     return (
         <div className="col">
             <div className="card">
-                <div className={ enoughCoins ? "buy-item-hover buy-coins-hover" : "buy-item-hover"}>
+                <div className={enoughCoins ? "buy-item-hover buy-coins-hover" : "buy-item-hover"}>
                     <div className="buy-menu">
                         <div className="d-flex justify-content-end">
                             <img src={buyWhite} alt="buy" className="buy-logo-white" />
                         </div>
                         <div className="buy-menu-coins">
                             {
-                                enoughCoins ? <div>You need {cost - userCoins}</div> : cost
+                                enoughCoins ?
+                                    <div>
+                                        You need {cost - userCoins}
+                                        <img src={coinsLogo} alt="coins" />
+                                    </div>
+                                    :
+                                    <div>
+                                        {cost}
+                                        <img src={coinsLogo} alt="coins" />
+                                    </div>
                             }
-                            <img src={coinsLogo} alt="coins" />
                         </div>
                         <button className="buy-menu-button" onClick={onClick}>{enoughCoins ? 'Get points' : 'Redeem now'}</button>
                     </div>

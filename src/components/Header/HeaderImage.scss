@@ -4,4 +4,21 @@
     .image {
         width: 100%;
     }
+    
+    .category {
+        font-size:64px;
+        color:#ffffff;
+        text-align:left;
+        position: absolute;
+        margin-left: 5%;
+        margin-top: -16%;
+
+        @media (max-width: 550px) {
+            font-size: 32px;
+        }
+
+        @media (max-width: 280px) {
+            font-size: 16px;
+        }
+    }
 }
