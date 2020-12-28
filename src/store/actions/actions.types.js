@@ -5,6 +5,9 @@ export const SET_PRODUCTS = 'SET_PRODUCTS'
 export const SET_HIGHEST_PRICE = 'SET_HIGHEST_PRICE'
 export const SET_LOWEST_PRICE = 'SET_LOWEST_PRICE'
 export const SET_MOST_RECENT = 'SET_MOST_RECENT'
+export const SET_ORIGINAL_PRODUCTS = 'SET_ORIGINAL_PRODUCTS'
+export const NEXT_PAGE = 'NEXT_PAGE'
+export const PREV_PAGE = 'PREV_PAGE'
 
 // USER
 export const GET_USER = 'GET_USER'

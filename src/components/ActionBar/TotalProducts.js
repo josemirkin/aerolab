@@ -1,11 +1,13 @@
 import React from 'react'
+import {useSelector} from 'react-redux'
 
 import './TotalProducts.scss'
 
 function TotalProducts() {
+    const {totalItems, products} = useSelector(state => state.stateProducts)
     return (
         <div className="total-products">
-            16 of 32 products
+            {products.length} of {totalItems} products
         </div>
     )
 }
