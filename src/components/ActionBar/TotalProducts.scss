@@ -6,4 +6,8 @@
     text-align:left;
     white-space: nowrap;
     margin-right: 24px;
+
+    @media (max-width: 1150px) {
+        margin-right: 12px;
+    }
 }

@@ -1,28 +1,55 @@
-.font {
-    font-size :24px;
-    color: #a3a3a3;
-    letter-spacing: -0.15px;
-    text-align: center;
-    margin: auto;
-    white-space: nowrap;
-    cursor: pointer;
+.filter-container {
+    display: flex;
 
-    &.with-padding {
-        padding-left: 24px;
+    @media (max-width: 850px) {
+        display: block;
+        margin-left: 20px;
     }
 
-    &.filter {
-        line-height: 48px;
-        margin-left: 12px;
-        margin-right: 12px;
-        background-color: #ededed;
-        border-radius: 100px;
-        width: 178px;
-        height: 48px;
+    @media (max-width: 330px) {
+        display: block;
+        margin-left: 10px;
     }
 
-    &.active {
-        background-color: #0ad4fa;
-        color: #ffffff;
+    .font {
+        font-size :24px;
+        color: #a3a3a3;
+        letter-spacing: -0.15px;
+        text-align: center;
+        margin: auto;
+        white-space: nowrap;
+        cursor: pointer;
+    
+        &.with-padding {
+            padding-left: 24px;
+    
+            @media (max-width: 1150px) {
+                padding-left: 12px;
+            }
+        }
+    
+        &.filter {
+            line-height: 48px;
+            margin-left: 12px;
+            margin-right: 12px;
+            background-color: #ededed;
+            border-radius: 100px;
+            width: 178px;
+            height: 48px;
+    
+            @media (max-width: 1150px) {
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+
+            @media (max-width: 850px) {
+                margin-top: 10px;
+            }
+        }
+    
+        &.active {
+            background-color: #0ad4fa;
+            color: #ffffff;
+        }
     }
 }

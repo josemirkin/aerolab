@@ -16,8 +16,8 @@ function Arrows() {
     }
     return (
         <div className="arrows">
-            {page === 1 ? null : <img className="arrow" src={leftArrow} alt="<" onClick={() => clickHandler('PREV')}/> }
-            {page === totalPages ? null : <img className="arrow" src={rightArrow} alt=">" onClick={() => clickHandler('NEXT')}/>}
+            <img src={leftArrow} alt="<" onClick={() => clickHandler('PREV')} className={page === 1 ? "arrow-hide" : "arrow"}/>
+            <img src={rightArrow} alt=">" onClick={() => clickHandler('NEXT')} className={page === totalPages ? "arrow-hide" : "arrow"} />
         </div>
     )
 }

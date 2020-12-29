@@ -28,7 +28,7 @@ function Filters() {
         }
     }
     return (
-        <div className="d-flex">
+        <div className="filter-container">
             <div className="font with-padding">Sort by:</div>
             <div onClick={() => onClick('recent')} className={`font filter${active === 'recent' ? ' active' : ''}`}>Most recent</div>
             <div onClick={() => onClick('lowest')} className={`font filter${active === 'lowest' ? ' active' : ''}`}>Lower price</div>

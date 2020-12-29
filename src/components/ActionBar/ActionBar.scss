@@ -1,6 +1,13 @@
 .action-bar {
+    display: flex;
     align-items: center;
     margin: 65px 0px 24px;
+
+    .total-products-hide {
+        @media (max-width: 520px) {
+            display: none;
+        }
+    }
 
     .action-bar-container {
         justify-content: space-between;
@@ -8,5 +15,9 @@
         align-items: center;
         width: 100%;
         border-left: 1px solid  #d9d9d9;
+
+        @media (max-width: 520px) {
+            border: none;
+        }
     }
 }
