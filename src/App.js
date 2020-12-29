@@ -24,6 +24,7 @@ function App() {
   useEffect(() => {
     dispatch(getProducts())
     dispatch(getUser())
+    //eslint-disable-next-line
   }, [])
 
   return (

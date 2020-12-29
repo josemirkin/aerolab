@@ -4,10 +4,10 @@ import {useSelector} from 'react-redux'
 import './TotalProducts.scss'
 
 function TotalProducts() {
-    const {totalItems, products} = useSelector(state => state.stateProducts)
+    const {totalItems, products, page} = useSelector(state => state.stateProducts)
     return (
         <div className="total-products">
-            {products.length} of {totalItems} products
+            {products.length * page} of {totalItems} products
         </div>
     )
 }
